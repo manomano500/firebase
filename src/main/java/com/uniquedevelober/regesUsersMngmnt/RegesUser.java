@@ -172,11 +172,14 @@ public class RegesUser {
                 userList.add(user);
 
             }
+            connection.close();
+            preparedStatement.close();
 
         } catch (Exception e) {
             setErrMsg(e.getMessage());
 
         }
+        
         return userList;
     }
 
