@@ -1,0 +1,6 @@
+com\uniquedevelober\regestratoin\logout.class
+com\uniquedevelober\regesUsersMngmnt\RegesUser.class
+api\UserResource.class
+com\uniquedevelober\projectsMngmnt\addproject.class
+com\uniquedevelober\regestratoin\RegestrationServlet.class
+com\uniquedevelober\regestratoin\login.class
