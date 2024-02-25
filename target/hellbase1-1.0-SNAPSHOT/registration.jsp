@@ -54,7 +54,7 @@
                         </div>
                         <div class="signup-image">
                             <figure>
-                                <img src="resources/images/signup-image.jpg" alt="sing up image">
+                                <img src="resources/images/guyWithNet.png" alt="sing up image">
                             </figure>
                             <a href="login.jsp" class="signup-image-link">I am already
                                 member</a>
