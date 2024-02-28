@@ -7,6 +7,8 @@
 <%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ page import=" com.uniquedevelober.UserFile" %>
+<jsp:include page="/UserFilesServlet"/>
+
 
 <!DOCTYPE html>
 <html>

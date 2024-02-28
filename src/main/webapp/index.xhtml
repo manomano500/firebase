@@ -22,18 +22,16 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/XHtml.xhtml to edit t
 
     <h:body>
 
-
         <ui:include src="/parts/nav.xhtml" ></ui:include>
         <h:outputText  class="text-danger m-5" value="#{regesUser.errMsg}" />
 
         <div class="container p-5 my-5 bg-dark text-white">
-            <p class="h2 ">Your Firebase projects</p>
+            <p class="h2 ">Firebase Files</p>
             <div class="row">
                 <div class=" col-2 card m-2" style="width:250px; height: 180px">
-                    <div class="card-body">
-                        <button type="button" class=" btn btn-link text-danger" data-toggle="modal" data-target="#popupForm">
-                            Add Project
-                        </button>
+                    <div class="card-body justify-content-center">
+                        <a class="btn bg-dark text-black btn-primary w-100 h-50 justify-content-center"  href="http://localhost:8080/hellbase1-main/success.jsp">Add Files</a>
+
                     </div>
 
 
@@ -94,7 +92,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/XHtml.xhtml to edit t
                         <th>ID</th>
                         <th>Username</th>
                         <th>Email</th>
-                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -103,9 +100,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/XHtml.xhtml to edit t
                             <td><h:outputText value="#{user.id}" /></td>
                             <td><h:outputText value="#{user.username}" /></td>
                             <td><h:outputText value="#{user.email}" /></td>
-                            <td>
-                                <h:commandButton styleClass="btn btn-danger" value="Delete"></h:commandButton>
-                            </td>   
+                           
                         </tr>
                     </c:forEach>
                 </tbody>

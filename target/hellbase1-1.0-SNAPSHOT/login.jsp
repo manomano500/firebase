@@ -9,9 +9,10 @@
 <!-- Font Icon -->
 <link rel="stylesheet"
       href="`resources/fonts/material-icon/css/material-design-iconic-font.min.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
 <!-- Main css -->
-<link rel="stylesheet" href="resources/css/style.css">
+<link rel="stylesheet" href="res/css/style.css">
 </head>
 <body>
     <input type="hidden" id="status" value="<%=request.getAttribute("status")%>">
@@ -25,7 +26,7 @@
 				<div class="signin-content">
 					<div class="signin-image">
 						<figure>
-                                                    <img src="resources/images/signin-image.jpg" alt="sing up image">
+                                                    <img src="res/images/signin-image.jpg" alt="sing up image">
 						</figure>
                                             <a href="registration.jsp" class="signup-image-link">Create an
 							account</a>
@@ -67,7 +68,7 @@
 
 	<!-- JS -->
 	<script src="vendor/jquery/jquery.min.js"></script>
-        <script src="resources/js/main.js"></script>
+        <script src="res/js/main.js"></script>
         
 
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>

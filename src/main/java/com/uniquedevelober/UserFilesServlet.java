@@ -57,7 +57,7 @@ public class UserFilesServlet extends HttpServlet {
             con.close();
             
             request.setAttribute("userFiles", userFiles);
-            request.getRequestDispatcher("success.jsp").forward(request, response);
+//            request.getRequestDispatcher("success.jsp").forward(request, response);
             
         } catch (Exception e) {
             e.printStackTrace();
