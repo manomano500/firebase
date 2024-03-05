@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+    <h:head>
+        <title>Login</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+        <style>
+            body {
+                background-color: #f5f5f5;
+            }
+            .container {
+                max-width: 400px;
+                margin: 0 auto;
+                padding-top: 100px;
+            }
+            .card {
+                border: none;
+                border-radius: 10px;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            }
+            .card-title {
+                color: #333;
+                font-size: 24px;
+                font-weight: bold;
+                text-align: center;
+                margin-bottom: 30px;
+            }
+            .form-group {
+                margin-bottom: 20px;
+            }
+            label {
+                font-weight: bold;
+            }
+            .form-control {
+                border-radius: 5px;
+            }
+            .btn-primary {
+                background-color: #4CAF50;
+                border-color: #4CAF50;
+            }
+            .btn-primary:hover {
+                background-color: #45a049;
+                border-color: #45a049;
+            }
+            .login-link {
+                display: block;
+                text-align: center;
+                margin-top: 20px;
+                color: #333;
+                font-size: 14px;
+                text-decoration: none;
+            }
+            .text-danger {
+                color: red;
+            }
+        </style>
+    </h:head>
+
+    <h:body>
+        <div class="container">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title">Login</h2>
+                    <h:form id="loginForm">
+
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <h:inputText id="email" value="#{user.email}" required="true" styleClass="form-control"/>
+                            <h:message for="email" class="text-danger"/>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password">Password:</label>
+                            <h:inputSecret id="password" value="#{user.password}" required="true" styleClass="form-control"/>
+                            <h:message for="password" class="text-danger"/>
+                        </div>
+
+                        <h:commandLink value="Log in" action="#{user.login}" styleClass="btn btn-primary"/>
+                        <br/>
+                        <h:outputLabel value="Don't Have An account?" for="signup" styleClass="mt-3"/>
+                        <a id="signup" href="signup.xhtml">SignUp</a>
+                    </h:form>
+                </div>
+            </div>
+            <h:outputText styleClass="text-danger m-2" value="#{user.errMsg}"/>
+
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </h:body>
+</html>

@@ -1,12 +1,5 @@
-C:\hellbase1-main\src\main\java\api\UserResource.java
-C:\hellbase1-main\src\main\java\com\uniquedevelober\DisplayFilesServlet.java
-C:\hellbase1-main\src\main\java\com\uniquedevelober\JakartaRestConfiguration.java
-C:\hellbase1-main\src\main\java\com\uniquedevelober\projectsMngmnt\addproject.java
-C:\hellbase1-main\src\main\java\com\uniquedevelober\regestratoin\login.java
-C:\hellbase1-main\src\main\java\com\uniquedevelober\regestratoin\logout.java
-C:\hellbase1-main\src\main\java\com\uniquedevelober\regestratoin\RegestrationServlet.java
-C:\hellbase1-main\src\main\java\com\uniquedevelober\regesUsersMngmnt\RegesUser.java
-C:\hellbase1-main\src\main\java\com\uniquedevelober\SubmitFormServlet.java
-C:\hellbase1-main\src\main\java\com\uniquedevelober\UploadServlet2.java
-C:\hellbase1-main\src\main\java\com\uniquedevelober\UserFile.java
-C:\hellbase1-main\src\main\java\com\uniquedevelober\UserFilesServlet.java
+D:\javaEe\hellbase1-main-final-plus\hellbase1-main-final-plus\hellbase1-main\src\main\java\com\uniquedevelober\files\FileData.java
+D:\javaEe\hellbase1-main-final-plus\hellbase1-main-final-plus\hellbase1-main\src\main\java\com\uniquedevelober\files\Files.java
+D:\javaEe\hellbase1-main-final-plus\hellbase1-main-final-plus\hellbase1-main\src\main\java\com\uniquedevelober\JakartaRestConfiguration.java
+D:\javaEe\hellbase1-main-final-plus\hellbase1-main-final-plus\hellbase1-main\src\main\java\com\uniquedevelober\regesUsersMngmnt\RegesUser.java
+D:\javaEe\hellbase1-main-final-plus\hellbase1-main-final-plus\hellbase1-main\src\main\java\com\uniquedevelober\regs\User.java

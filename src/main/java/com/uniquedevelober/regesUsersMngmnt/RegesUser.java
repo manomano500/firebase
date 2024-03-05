@@ -11,6 +11,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 import javax.faces.context.ExternalContext;
@@ -99,11 +100,9 @@ public class RegesUser {
         return userList;
     }
 
-    public String addRegesUser()  {
-        boolean isVerifid = false;
-
+       public String addRegesUser() {
+        boolean isVerified = false;
         Connection con = null;
-        RequestDispatcher rd = null;
 
         try {
             // Database connection
@@ -111,42 +110,46 @@ public class RegesUser {
             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/hellbase2", "root", "");
 
             // Insert user information into the database
-            String insertQuery = "INSERT INTO reges_users (email,username, password) VALUES (?, ?, ?)";
-            try (PreparedStatement statement = con.prepareStatement(insertQuery)) {
+            String insertQuery = "INSERT INTO reges_users (email, password, username, owner_user_id) VALUES (?, ?, ?, ?)";
+            try (PreparedStatement statement = con.prepareStatement(insertQuery, Statement.RETURN_GENERATED_KEYS)) {
+                // Assuming you store the current user's ID in a session variable
+                int currentUserId = (int) FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("userId");
+
                 statement.setString(1, email);
-                statement.setString(2, username);
-                statement.setString(3, password);
+                statement.setString(2, password);
+                statement.setString(3, username);
+                statement.setInt(4, currentUserId);
 
                 int rowCount = statement.executeUpdate();
 
                 if (rowCount > 0) {
                     // Insertion successful
-                    out.println("User registered successfully!");
+                    try (ResultSet generatedKeys = statement.getGeneratedKeys()) {
+                        if (generatedKeys.next()) {
+                            setId(generatedKeys.getInt(1));
+                        }
+                    }
+                    catch(Exception e){
+                        setErrMsg(e.getMessage());}
                     setErrMsg("User registered successfully!");
                 } else {
                     // Insertion failed
-                    out.println("Failed to register user.");
                     setErrMsg("Failed to register user.");
                 }
-
             }
         } catch (Exception e) {
             e.printStackTrace();
             setErrMsg(e.getMessage());
-            out.println("An error occurred while processing your request.");
         } finally {
             try {
-            con.close();
-                
+                if (con != null) {
+                    con.close();
+                }
             } catch (Exception e) {
+                setErrMsg(e.getMessage());
             }
-            
         }
-        return "index?faces-redirect=true";
-
-       
-       
-    
+        return "addUser?faces-redirect=true";
     }
     
     public List<RegesUser> getAllUsers() {
@@ -183,19 +186,47 @@ public class RegesUser {
         return userList;
     }
 
-    private boolean isEmailOrUsernameExists(Connection connection) {
-        String query = "SELECT COUNT(*) FROM `reges_users` WHERE `email` = ? OR `username` = ?";
-        try (PreparedStatement statement = connection.prepareStatement(query)) {
-            statement.setString(1, email);
-            statement.setString(2, username);
-            try (ResultSet resultSet = statement.executeQuery()) {
-                if (resultSet.next()) {
-                    int count = resultSet.getInt(1);
-                    return count > 0; // If count > 0, email or username exists
+    
+    
+        public void deleteRegesUser(int userId) {
+        Connection con = null;
+
+        try {
+            // Database connection
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/hellbase2", "root", "");
+
+            // Delete user by ID
+            String deleteQuery = "DELETE FROM reges_users WHERE id=?";
+            try (PreparedStatement statement = con.prepareStatement(deleteQuery)) {
+                statement.setInt(1, userId);
+
+                int rowCount = statement.executeUpdate();
+
+                if (rowCount > 0) {
+                    // Deletion successful
+                    setErrMsg("User deleted successfully!");
+                } else {
+                    // Deletion failed
+                    setErrMsg("Failed to delete user.");
                 }
             }
         } catch (Exception e) {
+            e.printStackTrace();
+            setErrMsg(e.getMessage());
+        } finally {
+            try {
+                if (con != null) {
+                    con.close();
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
-        return false;
+
     }
+        
+        
+        
+
 }

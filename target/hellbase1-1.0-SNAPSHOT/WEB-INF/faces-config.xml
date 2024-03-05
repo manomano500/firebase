@@ -28,6 +28,24 @@
         <managed-bean-name>regesUser</managed-bean-name>
         <managed-bean-class>com.uniquedevelober.regesUsersMngmnt.RegesUser</managed-bean-class>
     
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>files</managed-bean-name>
+        <managed-bean-class>com.uniquedevelober.files.Files</managed-bean-class>
+    
         <managed-bean-scope>request</managed-bean-scope></managed-bean>
+        
+     
        
+        
+        <managed-bean>
+            <managed-bean-name>user</managed-bean-name>
+            <managed-bean-class>com.uniquedevelober.regs.User</managed-bean-class>
+        
+    
+            <managed-bean-scope>request</managed-bean-scope></managed-bean>
+        
+     
+        
 </faces-config>

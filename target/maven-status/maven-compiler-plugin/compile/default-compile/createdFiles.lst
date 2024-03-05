@@ -1,12 +1,5 @@
 com\uniquedevelober\regesUsersMngmnt\RegesUser.class
-com\uniquedevelober\UserFile.class
-com\uniquedevelober\projectsMngmnt\addproject.class
-com\uniquedevelober\regestratoin\RegestrationServlet.class
-com\uniquedevelober\UserFilesServlet.class
-com\uniquedevelober\regestratoin\login.class
-com\uniquedevelober\regestratoin\logout.class
-com\uniquedevelober\DisplayFilesServlet.class
-com\uniquedevelober\SubmitFormServlet.class
-api\UserResource.class
+com\uniquedevelober\regs\User.class
+com\uniquedevelober\files\Files.class
 com\uniquedevelober\JakartaRestConfiguration.class
-com\uniquedevelober\UploadServlet2.class
+com\uniquedevelober\files\FileData.class
