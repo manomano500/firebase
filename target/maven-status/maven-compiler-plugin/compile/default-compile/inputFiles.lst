@@ -1,5 +1,13 @@
-D:\javaEe\hellbase1-main-final-plus\hellbase1-main-final-plus\hellbase1-main\src\main\java\com\uniquedevelober\files\FileData.java
+D:\javaEe\hellbase1-main-final-plus\hellbase1-main-final-plus\hellbase1-main\src\main\java\com\uniquedevelober\entitys\Files.java
+D:\javaEe\hellbase1-main-final-plus\hellbase1-main-final-plus\hellbase1-main\src\main\java\com\uniquedevelober\entitys\RegesUsers.java
+D:\javaEe\hellbase1-main-final-plus\hellbase1-main-final-plus\hellbase1-main\src\main\java\com\uniquedevelober\entitys\Users.java
+D:\javaEe\hellbase1-main-final-plus\hellbase1-main-final-plus\hellbase1-main\src\main\java\com\uniquedevelober\exceptions\IllegalOrphanException.java
+D:\javaEe\hellbase1-main-final-plus\hellbase1-main-final-plus\hellbase1-main\src\main\java\com\uniquedevelober\exceptions\NonexistentEntityException.java
+D:\javaEe\hellbase1-main-final-plus\hellbase1-main-final-plus\hellbase1-main\src\main\java\com\uniquedevelober\exceptions\PreexistingEntityException.java
+D:\javaEe\hellbase1-main-final-plus\hellbase1-main-final-plus\hellbase1-main\src\main\java\com\uniquedevelober\exceptions\RollbackFailureException.java
 D:\javaEe\hellbase1-main-final-plus\hellbase1-main-final-plus\hellbase1-main\src\main\java\com\uniquedevelober\files\Files.java
 D:\javaEe\hellbase1-main-final-plus\hellbase1-main-final-plus\hellbase1-main\src\main\java\com\uniquedevelober\JakartaRestConfiguration.java
 D:\javaEe\hellbase1-main-final-plus\hellbase1-main-final-plus\hellbase1-main\src\main\java\com\uniquedevelober\regesUsersMngmnt\RegesUser.java
 D:\javaEe\hellbase1-main-final-plus\hellbase1-main-final-plus\hellbase1-main\src\main\java\com\uniquedevelober\regs\User.java
+D:\javaEe\hellbase1-main-final-plus\hellbase1-main-final-plus\hellbase1-main\src\main\java\com\uniquedevelober\UserManagedBean.java
+D:\javaEe\hellbase1-main-final-plus\hellbase1-main-final-plus\hellbase1-main\src\main\java\com\uniquedevelober\UsersBean.java

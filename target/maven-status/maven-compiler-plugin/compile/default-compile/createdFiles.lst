@@ -1,5 +1,13 @@
-com\uniquedevelober\regesUsersMngmnt\RegesUser.class
 com\uniquedevelober\regs\User.class
+com\uniquedevelober\UsersBean.class
+com\uniquedevelober\regesUsersMngmnt\RegesUser.class
+com\uniquedevelober\entitys\RegesUsers.class
+com\uniquedevelober\exceptions\RollbackFailureException.class
+com\uniquedevelober\UserManagedBean.class
+com\uniquedevelober\entitys\Users.class
 com\uniquedevelober\files\Files.class
+com\uniquedevelober\exceptions\PreexistingEntityException.class
+com\uniquedevelober\entitys\Files.class
+com\uniquedevelober\exceptions\IllegalOrphanException.class
 com\uniquedevelober\JakartaRestConfiguration.class
-com\uniquedevelober\files\FileData.class
+com\uniquedevelober\exceptions\NonexistentEntityException.class
